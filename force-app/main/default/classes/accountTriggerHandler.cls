@@ -19,6 +19,9 @@ public class accountTriggerHandler {
             }
         }
     }
+
+    // HELLO GITHUB
+    
     public static void updateVIPforAllContacts(List<account> accTriggerNew, List<account> accTriggerOld, 
         Map<id, account> accTriggerNewMap, Map<id, account> accTriggerOldMap) {
         //get accountsIds for which VIP is CHANGED.
