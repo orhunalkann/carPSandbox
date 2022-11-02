@@ -1,4 +1,17 @@
 trigger accounttrigger on account (before insert, before update, after insert, after update, before delete) {
+    
+    //check if switch is ON or OFF
+    TriggerSwitch__c switchq = TriggerSwitch__c.getInstance('account');
+    boolean isOn = switchq.switch__c; // checkbox field
+    if (isOn == false){
+        return;
+    }
+    //if OFF
+        //return
+    
+    
+    
+    
     //system.debug(Trigger.operationType +'ilk satir');
     //system.debug('---start---');
     
