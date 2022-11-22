@@ -1,4 +1,8 @@
 public with sharing class RestCallOutsInnovas {
+    
+    //GET METHODS
+    
+    
     public static HttpResponse getAnimals() {
         //1. Prepare HttpRequest and wrap the necessary information in it
         HttpRequest request = new HttpRequest();
@@ -99,4 +103,42 @@ public with sharing class RestCallOutsInnovas {
         return response;
     
     }
+
+
+    public static HttpResponse getContactUsers(){
+        HttpRequest request = new HttpRequest();
+        request.setMethod('GET');
+        request.setEndpoint('https://mockyard.herokuapp.com/users');
+
+        Http http = new Http();
+        HttpResponse response = http.send(request);
+
+        if(response.getStatusCode() == 200){
+            system.debug('Worked');
+            //system.debug(response.getBody());
+            list<userToContactWrapper> wrapped = (list<userToContactWrapper>)JSON.deserialize(response.getBody(),list<userToContactWrapper>.class);
+            list<contact> conList = new list<contact>();
+            for(userToContactWrapper wrp : wrapped){
+                Contact ctn = new Contact();
+                ctn.Age__c = wrp.age;
+                ctn.image__c = wrp.image;
+                ctn.gender__c = wrp.gender;
+                ctn.email = wrp.email;
+                ctn.phone = wrp.phone;
+                string[] names = wrp.name.split(' ');
+                ctn.firstName = names[0];
+                ctn.lastName = names[1];
+                conList.add(ctn);
+            }
+
+            try{
+                insert conList;
+            }catch(Exception ex){
+                system.debug(ex.getMessage());
+            }
+
+        }
+        return response;
+    }
+
     }    
