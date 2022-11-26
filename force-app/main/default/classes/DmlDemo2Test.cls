@@ -34,5 +34,3 @@ public class DmlDemo2Test {
         system.assertEquals(sp.id, listSft[0].salesforce_project__c);
     }
 }
-
-

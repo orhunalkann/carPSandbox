@@ -24,7 +24,7 @@ public class AccountQueueableExampleTest {
         
         //asertion
 
-        account checkList = [select id, name from account where name like '%SI'];
+        list<account> checkList = [select id, name from account where name like '%SI'];
         system.assertEquals(100, checkList.size());
     }
 }

@@ -1,4 +1,3 @@
-
 //To write a Batch Apex class, your class must implement 
 //the Database.Batchable interface and include the following three methods
 

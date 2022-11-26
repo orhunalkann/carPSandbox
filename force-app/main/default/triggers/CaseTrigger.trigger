@@ -30,5 +30,4 @@ trigger CaseTrigger on Case (before insert, before update, after insert, after u
     for (Case c : trigger.new) {
         system.debug('Case # '+c.caseNumber+' with Id = '+c.Id+' Was Created on '+c.createdDate);
     }
-}   
-
+}

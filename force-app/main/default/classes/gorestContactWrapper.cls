@@ -3,7 +3,4 @@ public with sharing class gorestContactWrapper {
     public string email;
     public string gender;
     public string status;
-    
 }
-
-

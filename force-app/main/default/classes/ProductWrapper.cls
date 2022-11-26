@@ -7,10 +7,3 @@ public with sharing class ProductWrapper {
     public String createdAt;
     public string productId;
 }
-
-
-
-
-
-
-

@@ -36,4 +36,3 @@ public class Deneme2 {
             system.debug('This is a long time' + s);
         }
     }
-

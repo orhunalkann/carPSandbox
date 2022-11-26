@@ -19,9 +19,6 @@ public class accountTriggerHandler {
             }
         }
     }
-
-    // HELLO GITHUB
-
     public static void updateVIPforAllContacts(List<account> accTriggerNew, List<account> accTriggerOld, 
         Map<id, account> accTriggerNewMap, Map<id, account> accTriggerOldMap) {
         //get accountsIds for which VIP is CHANGED.
@@ -32,8 +29,7 @@ public class accountTriggerHandler {
             }
         }
         system.debug('vip is change acc ids ==> ' + accountIds);
-    
-    //HOW IS GITHUB ?
+
         if(!accountIds.isEmpty()){
             //all contacts for all of those accounts.
             list<contact> listContact = [select id, vip__c, accountid, name from contact where accountid in :accountIds];

@@ -7,7 +7,7 @@ public without sharing class LeadProcessor implements database.Batchable<sObject
         return ql;
     }
 
-    //2  Execute 
+    //2  Execute
 
     public void  Execute(Database.BatchableContext ct, list<Lead> scope){
 

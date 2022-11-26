@@ -47,10 +47,9 @@ public class setDemo {
             string newValue = eachStr.toUpperCase();
             set2.add(newValue);
 
-            set
+
         }
 
         system.debug(set2);
-
     }
 }

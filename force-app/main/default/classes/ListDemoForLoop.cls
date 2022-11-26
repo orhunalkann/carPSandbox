@@ -16,7 +16,7 @@ public class ListDemoForLoop {
 
         for (integer eachInteger : intList){
             returnSum += eachInteger;
-            //system.debug(returnSum);
+            system.debug(returnSum);
         }
 
         return returnSum;

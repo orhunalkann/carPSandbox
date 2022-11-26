@@ -97,5 +97,3 @@ public with sharing class SFProjectTriggerHandler {
     }
 
 }
-
-
