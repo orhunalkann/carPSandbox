@@ -8,8 +8,6 @@ trigger accounttrigger on account (before insert, before update, after insert, a
     }
     //if OFF
         //return
-
-        // MERGE ABOVE CODE
     
     
     

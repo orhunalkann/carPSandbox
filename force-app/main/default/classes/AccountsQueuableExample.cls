@@ -11,5 +11,3 @@ public with sharing class AccountsQueuableExample implements Queueable {
         update listAccount;
     }
 }
-
-// Queueable methods can be called in trigger (trigger.new give a list that you can pass as params)
