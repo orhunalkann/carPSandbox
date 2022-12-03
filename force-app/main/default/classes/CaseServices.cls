@@ -53,6 +53,7 @@ global with sharing class CaseServices {
     @HttpPut
     global static Id putCase(String Id, String Priority, String Origin, String Subject, String Description, string Status){
         Case cs = new Case();
+        cs.id = Id;
         cs.Priority = Priority;
         cs.Origin = Origin;
         cs.Subject = Subject;
@@ -81,14 +82,6 @@ global with sharing class CaseServices {
 
 
 }
-
-
-
-
-
-
-
-
 /*    ANOTHER METHOD TO TAKE ID FROM LINK
 //split()
 String str = 'boo:moo:voo';
@@ -107,3 +100,11 @@ String[] words = uri.split('/');
 ]
 
 */
+
+
+
+
+
+
+
+
