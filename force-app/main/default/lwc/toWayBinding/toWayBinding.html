@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="TWO WAY DATA  BINDING">
+        <div class= "slds-var-m-around_medium">
+            <lightning-input 
+                type="Text" 
+                label="Your title"
+                value={title}
+                onkeyup={changeHandler}>
+            </lightning-input>
+        </div>
+        <div class="slds-var-m-top_x-small">
+            Latest title is: {title}
+        </div>
+    </lightning-card>
+</template>
