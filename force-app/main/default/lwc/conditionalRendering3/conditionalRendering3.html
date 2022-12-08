@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Rendering3">
+        <div class="slds-var-m-around_medium">
+            <lightning-button 
+                variant="brand"
+                label="Click me"
+                onclick={clickHandler}>
+            </lightning-button>
+        </div>
+        <template if:true={showContent}>
+            Show content was True <br/>
+            It showed
+        </template>
+    </lightning-card>
+</template>
