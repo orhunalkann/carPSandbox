@@ -1,0 +1,37 @@
+<template>
+    <lightning-card title="AIRLINES__c RECORD EDIT_FORM" icon-name="custom:custom20">
+        <div class="slds-var-m-around_medium">
+            <lightning-record-edit-form
+                object-api-name={objApi}
+                record-id={recId}
+                onsuccess={successHandler}>
+                <lightning-messages></lightning-messages>
+                <div class="slds-grid slds-gutters">
+                    <div class="slds-col">
+                        <lightning-input-field field-name={field.name}></lightning-input-field>
+                        <lightning-input-field field-name={field.country}></lightning-input-field>
+                        <lightning-input-field field-name={field.slogan}></lightning-input-field>
+                    </div>
+                    <div class="slds-col">
+                        <lightning-input-field field-name={field.headq}></lightning-input-field>
+                        <lightning-input-field field-name={field.est}></lightning-input-field>
+
+                    </div>
+                </div>
+                <div class="slds-align_absolute-center">
+                    <lightning-button 
+                        variant="neutral"
+                        label="Cancel" 
+                        type="reset">
+                    </lightning-button>
+                    <lightning-button 
+                        variant="brand"
+                        label="Save" 
+                        type="submit"
+                        class="slds-var-m-left_x-small">
+                    </lightning-button>
+                </div>
+            </lightning-record-edit-form>
+        </div>
+    </lightning-card>
+</template>
