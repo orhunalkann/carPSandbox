@@ -1,0 +1,25 @@
+<template>
+    <lightning-card icon-name="standard:contact" title="Get Contacts">
+        <div class="scons-var-m-around_medium">
+            <lightning-input
+                type="search"
+                label="Enter Search word"
+                onchange={changeHandler}>
+            </lightning-input>
+        </div>
+        <div class="scons-var-m-around_medium">
+            <template if:true={contacts}>
+                <div class="scons-grid scons-gutters">
+                    <template for:each={contacts} for:item="con">
+                        <div key={con.Id} class="slds-box scons-var-m-right_x-small scons-col">
+                            <strong>Name:</strong>{con.FirstName} {con.LastName} <br />
+                            <strong>Title: </strong>{con.Title} <br />
+                            <strong>Department: </strong>{con.Department}<br/>
+                        </div>
+                    </template>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+    
+</template>

@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="ACCOUNT VIEW FORM">
+        <lightning-record-view-form
+            object-api-name={objectName}
+            record-id={recordId}>
+                <lightning-output-field field-name={fields.accName}></lightning-output-field>
+                <lightning-output-field field-name={fields.accType}></lightning-output-field>
+                <lightning-output-field field-name={fields.accPhone}></lightning-output-field>
+                <lightning-output-field field-name={fields.accInd}></lightning-output-field>
+                <lightning-output-field field-name={fields.accRating}></lightning-output-field>
+        </lightning-record-view-form>
+    </lightning-card>
+</template>

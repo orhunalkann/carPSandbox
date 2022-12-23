@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Display Accounts" icon-name="standard:account">
+        <div class="slds-var-m-around_medium">
+            <lightning-combobox
+                options={indValues}
+                label="Select Industry"
+                onchange={changeHandler}>
+            </lightning-combobox>
+        </div>
+        <div class="sacs-var-m-around_medium">
+            <template if:true={accs}>
+                <div class="sacs-grid sacs-gutters">
+                    <template for:each={accs} for:item="ac">
+                        <div key={ac.Id} class="slds-box sacs-var-m-right_x-small sacs-col">
+                            <strong>{ac.Name}</strong><br />
+                            <strong>Type: </strong>{ac.Type} <br />
+                            <strong>Annual Revenue: </strong>{ac.AnnualRevenue}<br/>
+                        </div>
+                    </template>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

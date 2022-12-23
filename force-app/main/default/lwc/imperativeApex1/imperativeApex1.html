@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Get Top 5 Accounts" icon-name="standard:account">
+        <div class="slds-var-m-around_medium">
+            <lightning-button
+                label="Search"
+                onclick={clickHandler}
+                variant='brand'
+                class="slds-var-m-right_x-small">
+            </lightning-button>
+            <lightning-button
+                label="Hide"
+                onclick={hideHandler}
+                variant='destructive'>
+            </lightning-button>
+            <template if:true={accs}>
+                <lightning-datatable
+                    data={accs}
+                    columns={colls}
+                    key-field="Id">
+                </lightning-datatable>
+            </template>
+        </div>
+    </lightning-card>
+</template>

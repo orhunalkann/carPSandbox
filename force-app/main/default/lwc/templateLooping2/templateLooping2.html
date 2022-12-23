@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Looping 2">
+        <div class="slds-var-m-around_medium">
+            <template for:each={contacts} for:item='each'>
+                <div key={each.Id}>
+                    <strong>{each.Name}</strong> <br/>
+                    {each.Industry}, {each.Rating}
+                    <br/>
+
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

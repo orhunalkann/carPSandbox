@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Rendering 2">
+        <div class="slds-var-m-around_medium">
+            <lightning-input 
+                label="Enter Country"
+                type="text"
+                value={country}
+                onchange={changeHandler}>
+            </lightning-input>
+        </div>
+        <template if:true={showContent}>
+            Valid Country
+        </template>
+    </lightning-card>
+</template>

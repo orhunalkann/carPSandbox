@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Delete Record" icon-name="utility:delete">
+        <lightning-input 
+            type='text'
+            label="Enter a record id you want to delete"
+            onchange={changeHandler}
+            class="res">
+        </lightning-input>
+        <div class='slds-var-m-top_x-small slds-align_absolute-center'>
+            <lightning-button
+                label="Delete"
+                variant="destructive"
+                onclick={deleteRec}>
+            </lightning-button>
+        </div>
+    </lightning-card>
+</template>

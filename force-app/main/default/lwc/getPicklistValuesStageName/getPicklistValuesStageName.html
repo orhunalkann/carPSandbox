@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="GET PICKLIST VALUES">
+        <div class="slds-var-m-around_medium">
+            <lightning-combobox 
+                label="Select the TYPE"
+                options={selectedV}
+                onchange={changeHandler}>
+            </lightning-combobox>
+            <div class="slds-var-m-around_medium">
+                Selected value : {visib}
+            </div>
+        </div>
+    </lightning-card>
+</template>

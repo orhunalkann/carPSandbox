@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="CONTITIONAL RENDERING 1">
+        <div class="slds-var-m-around_medium">
+            <template if:true={showContent}>
+                {text}
+            </template>
+            <template if:false={showContent}>
+                This is when showContent is false
+            </template>
+        </div>
+    </lightning-card>
+</template>

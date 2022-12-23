@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Blogs">
+        <div class="slds-var-m-around_medium">
+            <template for:each={blogs} for:item="each">
+                <div key={blogs.Id}>
+                    <strong>{each.Topic}</strong> <br/>
+                    {each.Description}
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

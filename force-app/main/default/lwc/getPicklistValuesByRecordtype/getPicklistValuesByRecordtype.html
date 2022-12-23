@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="GET PICKLIST VALUES BY RECORDTYPE ID">
+        <div class="slds-var-m-around_medium">
+            <lightning-combobox 
+                label="Industry VALUES"
+                options={industryOpt}
+                onchange={changeHandler}>
+
+            </lightning-combobox>
+            <lightning-combobox 
+                label="Type VALUES"
+                options={typeOpt}
+                onchange={changeHandler2}>
+
+            </lightning-combobox>
+        </div>
+        <div class="slds-var-m-around_medium">
+            Industry selected value : {visibT} <br/>
+            Type selected value : {visibI}
+        </div>
+    </lightning-card>
+</template>
