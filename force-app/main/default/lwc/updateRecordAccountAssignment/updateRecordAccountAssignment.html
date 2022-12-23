@@ -1,0 +1,42 @@
+<template>
+    <lightning-card title="Account Update Assignment" icon-name="standart:account">
+        <div class="slds-var-m-around_medium">
+            <template if:true={accRec.data}>
+                <lightning-input
+                    label="Name"
+                    name="Name"
+                    value={accRec.data.fields.Name.value} 
+                    onchange={changeHandler}>
+                </lightning-input>
+                <lightning-combobox
+                    label="Type"
+                    value={accRec.data.fields.Type.value}
+                    options={typeValues}
+                    onchange={changeHandler}
+                    name="Type">
+                </lightning-combobox>
+                <lightning-combobox
+                    label="Industry"
+                    value={accRec.data.fields.Industry.value}
+                    options={indValues}
+                    onchange={changeHandler}
+                    name="Industry">
+                </lightning-combobox>
+                <lightning-input
+                    type="checkbox"
+                    label="VIP ?"
+                    checked={accRec.data.fields.VIP__c.value}
+                    name="VIP__c"
+                    onchange={changeHandler}>
+                </lightning-input>
+            </template>
+            <div class="slds-align_absolute-center slds-var-m-top_small">
+                <lightning-button
+                    variant="brand"
+                    label="Update"
+                    onclick={saveHandler}>
+                </lightning-button>
+            </div>
+        </div>
+    </lightning-card>
+</template>

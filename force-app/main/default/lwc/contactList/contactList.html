@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Contact Form APEX@Wire">
+        <template if:true={contacts.data}>
+        <lightning-datatable
+            key-field="Id"
+            data={contacts.data}
+            columns={coloums}>
+        </lightning-datatable>
+        </template>
+        <template if:true={errors}>
+            <p>{errors}</p>
+        </template>
+    </lightning-card>
+</template>
+

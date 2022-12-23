@@ -1,0 +1,42 @@
+<template>
+    <lightning-card title="Create Blog" icon-name="utility:note">
+        <div class="slds-var-m-around_medium">
+            <template if:true={outcome.data}>
+                <form class="blogform">
+                    <lightning-input
+                        label="Author"
+                        name="Author__c"
+                        value={outcome.data.fields.Author__c.value}
+                        onchange={changeHandler}>
+                    </lightning-input>
+                    <lightning-input
+                        label="Title"
+                        name="Title__c"
+                        value={outcome.data.fields.Title__c.value}
+                        onchange={changeHandler}>
+                    </lightning-input>
+                    <lightning-input
+                        label="Topic"
+                        name="Topic__c"
+                        value={outcome.data.fields.Topic__c.value}
+                        onchange={changeHandler}>
+                    </lightning-input>
+                    <lightning-textarea
+                        label="Body"
+                        name="Body__c"
+                        value={outcome.data.fields.Body__c.value}
+                        onchange={changeHandler}>
+                    </lightning-textarea>
+                    <div class="slds-var-m-top_x-small slds-align_absolute-center">
+                        <lightning-button
+                            variant="brand"
+                            label="Update"
+                            onclick={saveBlog}>
+                        </lightning-button>
+                    </div>
+
+                </form>
+            </template>
+        </div>
+    </lightning-card>
+</template>
