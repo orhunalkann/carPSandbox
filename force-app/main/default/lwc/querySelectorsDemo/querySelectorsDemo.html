@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Query Selectors">
+        <div class="slds-var-m-around_medium">
+            <h1>I am a header tag!</h1>
+            <p>I'm a p tag. This is my own try!</p>
+            <template for:each={fruits} for:item="fr">
+                <div class="child" key={fr}>{fr}</div>
+            </template>
+            
+            <lightning-button
+                label="Click Me"
+                variant="brand"
+                onclick={clickHandler}>
+            </lightning-button>
+
+        </div>
+    </lightning-card>
+</template>

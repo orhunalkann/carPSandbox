@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="P2C Primitives">
+        <div class="slds-var-m-around_medium">
+            <div>Hello there, i am the parent component! Sending student name and age</div>
+            <c-p2c-primitives-child1
+                age={studentAge}
+                full-name={studentName}
+            >
+            </c-p2c-primitives-child1>
+        </div>
+    </lightning-card>
+</template>
