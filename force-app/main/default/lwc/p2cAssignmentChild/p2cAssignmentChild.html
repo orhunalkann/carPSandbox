@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Contacts" icon-name="standard:contact">
+        <div class="slds-var-m-aroumd_medium slds-grid slds-gutter">
+            <template for:each={cons} for:item="con">
+                <div key={con.Id} class="slds-col slds-box">
+                    <strong>Name: </strong>{con.Name} <br/>
+                    <strong>Company: </strong>{con.company}
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>
