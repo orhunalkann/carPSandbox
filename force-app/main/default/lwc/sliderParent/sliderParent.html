@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Slider Case">
+        <lightning-button 
+            label="Reset" 
+            slot="actions"
+            onclick={clickHand}>
+        </lightning-button>
+        <div class="slds-var-m-around_medium">
+            <lightning-input
+            label="Enter volume"
+            onchange={changeHandler}
+            type="number">
+        </lightning-input>
+        </div>
+        <c-slider-child
+            val={asd}>
+        </c-slider-child>
+    </lightning-card>
+    
+</template>

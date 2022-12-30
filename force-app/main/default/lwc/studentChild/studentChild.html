@@ -1,0 +1,14 @@
+<template>
+    <div class="slds-var-m-around_medium" >
+        <template if:true={info}>
+            <lightning-datatable
+            key-field="Id"
+            columns={colonlar}
+            data={info}>
+        </lightning-datatable>
+        </template>
+        <template if:true={err}>
+            {err}
+        </template>
+    </div>
+</template>

@@ -1,0 +1,35 @@
+<template>
+    <lightning-card title="Progress Bar">
+        <div class='slds-var-m-around_medium'>
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col">
+                    <lightning-combobox
+                        label="Select size"
+                        options={sizeOptions}
+                        name="size"
+                        onchange={changeHandler}>
+                    </lightning-combobox>
+                </div>
+                <div class="slds-col">
+                    <lightning-input
+                        type="number"
+                        label="Enter progress bar value"
+                        name="progress"
+                        onchange={changeHandler}>
+                    </lightning-input>
+                    
+                </div>
+            </div>
+            <div>
+                <lightning-button
+                    label="Reset Progress"
+                    onclick={progressHandler}>
+                </lightning-button>
+            </div>
+        </div>
+        <c-progress-bar
+            size={progressSize}
+            value={progressValue}>
+        </c-progress-bar>
+    </lightning-card>
+</template>
